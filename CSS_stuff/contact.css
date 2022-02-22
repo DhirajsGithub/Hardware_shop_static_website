@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,100&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    /* background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% ); */
+    background-image: radial-gradient( circle 674px at 18.3% 77%,  rgba(139,186,244,1) 3.4%, rgba(15,51,92,1) 56.6% );
+    /* position: relative; */
+    
+}
+.home-page{
+    position: relative;
+    /* height: 95vh; */
+    height: 100vh;
+}
+.header{
+    position: relative;
+}
+
+/* #################################### utility classes ################################### */
+.md-heading{
+    font-size: 1.8rem;
+}
+.para-heading{
+    font-size: 1.5rem;
+}
+.red-color{
+    color: #de434a;
+}
+.bg-color{
+    color: rgb(175, 174, 174);
+}
+.lg-heading{
+    font-size: 2.6rem;
+}
+.contact-us-logo{
+    color: #3457D5;
+}
+
+/* ############################ header styling ################################ */
+.container{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+    
+}
+.header .container{
+    /* border: 2px solid red; */
+    height: 15rem;
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #087bbd, #07075f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.header .title{
+    margin: 4rem 2rem 2rem 7rem;
+}
+.header .title-logo::after{
+    display: inline;
+    content: ' Indiana';
+    color: #de434a;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4.4rem;
+    font-weight:bold;
+    border-bottom: 2px solid black;
+}
+.header .reference::after{
+    display: inline;
+    content: 'Hardware & Spare parts';
+    color: #de434a;
+    font-size: 2rem;
+    font-weight: normal;
+}
+.header .title-logo{
+    margin-bottom: 0.8rem;
+
+}
+.header a{
+    text-decoration: none;
+    color: black;
+}
+.header li{
+    list-style-type:none;
+    text-transform: uppercase;
+}
+.header .navbar .nav-items{
+    float: right;
+    margin-right: 5rem;
+    /* nav-items have net margin of 7rem from right as we take margin of 2rem to nav-item  */
+    margin-top: 9rem;
+}
+.header .navbar .title{
+    float: left;
+}
+.header .navbar::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.header .navbar .nav-item{
+    display: inline-block;
+    margin: 2rem;
+    font-weight: 500;
+}
+
+.header .navbar .nav-item:hover{
+    background-image: radial-gradient( circle 674px at 18.3% 77%,  rgba(139,186,244,1) 3.4%, rgba(15,51,92,1) 56.6% );
+    /* padding: 0.2rem; */
+    /* border-radius: 1rem; */
+    /* color: blue; */
+    text-decoration: underline;
+}
+/* ################# styling dropdown header ################### */
+
+.drop-down ul {
+    display: none;
+    /* ul will not appear now  */
+    position: absolute;
+    /* to keep all the sub list ans the li at same place  */
+    /* background-color: rgb(223, 223, 223); */
+    background-color: rgb(175, 174, 174);
+    border-radius: 0 0 .5rem .5rem;
+    margin-top: 0.1rem;
+    /* margin-top: 0.5rem; */
+   
+}
+.nav-items li:hover ul {
+    /* ul will appear now  */
+    display: block; 
+}
+.drop-down ul li {
+    margin: 0.5rem;
+    padding: 0.3rem;
+    /* background-color: white; */
+    font-size: 1.5rem;
+    width: 8rem;
+}
+
+.header .nav-items .drop-down{
+    margin-left: -2.05rem;
+}
+.drop-down ul li a:hover{
+    background-image: radial-gradient( circle 674px at 18.3% 77%,  rgba(139,186,244,1) 3.4%, rgba(15,51,92,1) 56.6% );
+    text-decoration: underline;
+}
+
+/* ############################ styling email and phone header ########################## */
+
+.email-phone{
+    color: #de434a;
+    float: right;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+.email{
+    display: inline-block;
+    margin-right: 4rem;
+}
+.phone{
+    display: inline-block;
+}
+
+/* ######################## styling contact-us #############################  */
+.contact-us{
+    /* border: 2px solid red; */
+    max-width: 140rem;
+    width: 90%;
+    margin: 4rem auto;
+    height: 80rem;
+    
+}
+.contact-us .address{
+    border: 2px solid red;
+    width: 48%;
+    height: 90%;
+    float: left;
+    background-color: rgb(175, 174, 174);
+    padding: 1rem;
+}
+.contact-us .address .location, .email, .call{
+    margin: 1rem;
+}
+
+/* ##################### stylin border of adress ####################### */
+/* .location  */
+.contact-us .address .location p:first-child::after{
+    content: '';
+    display: block;
+    border-bottom: 0.1rem solid #de434a;
+    width: 8rem;
+    margin-left: 3.7rem;
+}
+.contact-us .address .location p:first-child span::after {
+    content: '';
+    display: block;
+    border-bottom: 0.1rem solid black;
+    width: 3rem;
+    margin-left: 11.7rem;
+    margin-bottom: -0.1rem;
+}
+
+/* email  */
+.contact-us .address .email p:first-child::after{
+    content: '';
+    display: block;
+    border-bottom: 0.1rem solid #de434a;
+    width: 5rem;
+    margin-left: 3rem;
+}
+.contact-us .address .email p:first-child span::after {
+    content: '';
+    display: block;
+    border-bottom: 0.1rem solid black;
+    width: 3.4rem;
+    margin-left: 7.7rem;
+    margin-bottom: -0.1rem;
+}
+
+/* phone  */
+.contact-us .address .call p:first-child::after{
+    content: '';
+    display: block;
+    border-bottom: 0.1rem solid #de434a;
+    width: 4.4rem;
+    margin-left: 3rem;
+}
+.contact-us .address .call p:first-child span::after {
+    content: '';
+    display: block;
+    border-bottom: 0.1rem solid black;
+    width: 3.2rem;
+    margin-left: 7.4rem;
+    margin-bottom: -0.1rem;
+}
+
+/* ################################ styling sign-in ############################ */
+.contact-us .sign-in{
+    border: 2px solid red;
+    width: 48%;
+    height: 90%;  
+    float: right;
+    background-color: rgb(175, 174, 174);
+    padding: 1rem;
+}
+
+.contact-us .figure{
+    margin-top: 4rem;
+    border: 2px solid white;
+    width: 100%;
+    height: 42.7rem;
+}
+.contact-us .figure img{
+    border:2px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+/* ##################### styling sign up ###################### */
+
+.contact-us .sign-in .contact-us-hd p:first-child::after{
+    content: '';
+    display: block;
+    border: 0.1px solid #de434a;
+    width: 9rem;
+}
+.contact-us .sign-in .contact-us-hd p:first-child span::after{
+    content: '';
+    display: block;
+    border: 0.1px solid black;
+    width: 3.2rem;
+    margin-left: 9.2rem;
+    margin-bottom: -0.2rem;
+
+}
+
+.contact-us .sign-in .contact-ref, .find-us{
+    margin: 1.5rem;
+    /* display: block; */
+}
+.contact-us .sign-in .inquiry p, .inquiry textarea{
+    margin-left: 1.5rem;
+}
+.contact-us .sign-in .contact-ref label::after{
+    content: "*";
+    color: #de434a;
+}
+.contact-us .sign-in .contact-ref label{
+    display: block;
+}
+.contact-us .sign-in input {
+    margin-top: 0.5rem;
+    display: block;
+    height: 2.5rem;
+    width: 60%;
+}
+
+.contact-us .sign-in .wrapper-shit{
+    position: relative;
+}
+.contact-us .sign-in textarea{
+    margin-top: 0.5rem;
+    /* display: block; */
+    display: inline;
+    height: 10rem;
+    width: 60%;
+    float: left;
+}
+.contact-us .sign-in .submit{
+    /* text-decoration: none; */
+    width: 10rem;
+    /* padding: 1rem; */
+    /* display: inline-block; */
+    float: right;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    
+}
+.contact-us .sign-in .submit [type = "submit"]{
+    background-color: #de434a;
+    color: white;
+}
+.contact-us .sign-in .submit [type = "submit"]:hover{
+    cursor: pointer;
+}
+.contact-us .sign-in .wrapper-shit::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.contact-us .sign-in .find-us{
+    border: 2px solid white;
+    width: 90%;
+    height: 25rem;
+}
+.contact-us .sign-in .find-us img{
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+}
+
+/* ############################## footer styling ########################  */
+
+.footer{
+    border: 2px solid white;
+    width: 100%;
+    height: 18rem;
+    text-align: center;
+    background: -webkit-linear-gradient(to left, #1CB5E0, #001646);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #087bbd, #071c5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.footer .box-wrapper{
+    border: 4px solid black;
+    height: 18rem;
+    width: 100%;
+    padding: 2rem;
+    
+}
+.footer .box-wrapper a{
+    text-decoration: none;
+    margin: 2rem;
+}
+.footer .box-wrapper .short-para{
+    margin-top: 2rem;
+}
+.footer .box-wrapper .social-hd{
+    margin-bottom: 2rem;
+    /* border: 2px solid black; */
+    width: 11rem;
+   margin: 0 auto;
+    
+}
+.footer .box-wrapper .social-hd::after{
+    content: '';
+    display: block;
+    border: 0.1rem solid #de434a;
+    width: 5rem;
+}
+.footer .box-wrapper span::after{
+    content: '';
+    display: block;
+    border: 0.1rem solid black;
+    width: 5.15rem;
+    margin-left: 5.24rem;
+    margin-bottom: -0.2rem;
+}
+.footer .box-wrapper .wrap-logo-hd{
+    margin-top: 2rem;
+}

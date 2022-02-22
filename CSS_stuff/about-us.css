@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,100&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    /* background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% ); */
+    background-image: radial-gradient( circle 674px at 18.3% 77%,  rgba(139,186,244,1) 3.4%, rgba(15,51,92,1) 56.6% );
+    /* position: relative; */
+    
+}
+.home-page{
+    position: relative;
+    /* height: 95vh; */
+    height: 100vh;
+}
+.header{
+    position: relative;
+}
+
+/* #################################### utility classes ################################### */
+.md-heading{
+    font-size: 1.8rem;
+}
+.para-heading{
+    font-size: 1.5rem;
+}
+.red-color{
+    color: #de434a;
+}
+.bg-color{
+    color: rgb(175, 174, 174);
+}
+
+/* ############################ header styling ################################ */
+.container{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+    
+}
+.header .container{
+    /* border: 2px solid red; */
+    height: 15rem;
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #087bbd, #07075f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.header .title{
+    margin: 4rem 2rem 2rem 7rem;
+}
+.header .title-logo::after{
+    display: inline;
+    content: ' Indiana';
+    color: #de434a;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4.4rem;
+    font-weight:bold;
+    border-bottom: 2px solid black;
+}
+.header .reference::after{
+    display: inline;
+    content: 'Hardware & Spare parts';
+    color: #de434a;
+    font-size: 2rem;
+    font-weight: normal;
+}
+.header .title-logo{
+    margin-bottom: 0.8rem;
+
+}
+.header a{
+    text-decoration: none;
+    color: black;
+}
+.header li{
+    list-style-type:none;
+    text-transform: uppercase;
+}
+.header .navbar .nav-items{
+    float: right;
+    margin-right: 5rem;
+    /* nav-items have net margin of 7rem from right as we take margin of 2rem to nav-item  */
+    margin-top: 9rem;
+}
+.header .navbar .title{
+    float: left;
+}
+.header .navbar::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.header .navbar .nav-item{
+    display: inline-block;
+    margin: 2rem;
+    font-weight: 500;
+}
+
+.header .navbar .nav-item:hover{
+    background-image: radial-gradient( circle 674px at 18.3% 77%,  rgba(139,186,244,1) 3.4%, rgba(15,51,92,1) 56.6% );
+    /* padding: 0.2rem; */
+    /* border-radius: 1rem; */
+    /* color: blue; */
+    text-decoration: underline;
+}
+/* ################# styling dropdown header ################### */
+
+.drop-down ul {
+    display: none;
+    /* ul will not appear now  */
+    position: absolute;
+    /* to keep all the sub list ans the li at same place  */
+    /* background-color: rgb(223, 223, 223); */
+    background-color: rgb(175, 174, 174);
+    border-radius: 0 0 .5rem .5rem;
+    margin-top: 0.1rem;
+    /* margin-top: 0.5rem; */
+   
+}
+.nav-items li:hover ul {
+    /* ul will appear now  */
+    display: block; 
+}
+.drop-down ul li {
+    margin: 0.5rem;
+    padding: 0.3rem;
+    /* background-color: white; */
+    font-size: 1.5rem;
+    width: 8rem;
+}
+
+.header .nav-items .drop-down{
+    margin-left: -2.05rem;
+}
+.drop-down ul li a:hover{
+    background-image: radial-gradient( circle 674px at 18.3% 77%,  rgba(139,186,244,1) 3.4%, rgba(15,51,92,1) 56.6% );
+    text-decoration: underline;
+}
+
+/* ############################ styling email and phone header ########################## */
+
+.email-phone{
+    color: #de434a;
+    /* float: right; */
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+.email{
+    display: inline-block;
+    margin-right: 4rem;
+}
+.phone{
+    display: inline-block;
+}
+
+
+/* ################################ styling about us #################################### */
+
+#about-us{
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#about-us .container{
+    /* border: 2px solid red; */
+    height: 100%;
+    background-color: rgb(175, 174, 174);
+}
+
+/* ################################ about heading styling ######################################## */
+#about-us .about-hd{
+    color: black;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+    width: 12.8rem;
+    /* border: 2px solid green; */
+    text-align: center;
+}
+
+/* for about-hd container with 8rem margin from left and width be 12.8rem + text is allign centre  */
+#about-us .about-para-container{
+    margin: 4rem;
+    /* border: 2px solid blue; */
+    /* height: 55vh; */
+}
+
+/* adding bottom border  */
+#about-us .about-hd::after{
+    content: '';
+    display: block;
+    width: 7.7rem;
+    border: 0.1rem solid #de434a;
+}
+#about-us .about-hd span{
+    color: #de434a;
+}
+
+/* adding bottom border  */
+#about-us .about-hd span::after{
+    margin-bottom: -0.18rem;
+    margin-left: 7.8rem;
+    content: '';
+    display: block;
+    width: 4.4rem;
+    border: 0.1rem solid black;    
+}
+#about-us .about-image-box{
+    width: 23.4rem;
+    height: 23.4rem;
+}
+#about-us .about-image{
+    /* width: 50px; */
+    /* margin-top: 2rem; */
+    width: 100%;
+    height: 23.4rem;
+    border: 2px solid rgb(175, 174, 174);
+}
+#about-us .about-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#about-us .hd-and-image{
+    padding: 1rem 2rem 1rem 0;
+}
+#about-us .hd-and-image{
+    display: inline;
+    float: left;
+    /* floar left se hi kaam ho gaya hd-and-image and about-us-para ka  */
+    
+}
+#about-us .about-us-para{
+    /* float: right;  */
+     margin-top: 5rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 1rem;
+    margin-right: 0.8rem;
+    border-bottom: 2px solid black;
+}
+
+/* ################################### styling satisfy-customer ############################## */
+
+#about-us .satisfy-customer{
+    margin: 0 4rem;
+    /* border: 2px solid red; */
+    /* abhi ke liye 100vh le lo jab fotter and all that add karege toh height ko 100% kar denge */
+    /* height: 70vh; */
+    height: 100%;
+    /* background-color: #dfdfdf; */
+}
+#about-us .satisfy-customer .unite-box-1{
+    border: 2px solid rgb(175, 174, 174);
+    float: left;
+    width: 48%;
+    height: 30rem;
+}
+#about-us .satisfy-customer .unite-box-1 .unite-people-hd{
+    color: black;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    /* margin-bottom: 1rem; */
+    width: 21rem;
+    /* border: 2px solid green; */
+    text-align: center;
+}
+
+/* adding red boreder at bottom  */
+#about-us .satisfy-customer .unite-box-1 .unite-people-hd::after{
+    content: '';
+    display: block;
+    border: 0.1rem solid #de434a;
+    width: 10rem;
+}
+
+#about-us .satisfy-customer .unite-box-1 .unite-people-hd span{ 
+    color: #de434a;
+}
+
+/* adding black border at bottom  */
+#about-us .satisfy-customer .unite-box-1 .unite-people-hd span::after{
+    content: '';
+    display: block;
+    border: 0.1rem solid black;
+    width: 10.2rem;
+    margin-left: 10.2rem;
+    margin-bottom: -0.2rem;
+}
+#about-us .satisfy-customer .unite-box-1 .unite-people-para{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 1rem;
+}
+#about-us .satisfy-customer .unite-box-2{
+    float: right;
+    width: 48%;
+    height: 30rem;
+    
+    /* padding: 0.5rem; */
+}
+#about-us .satisfy-customer .wrapper-box::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/* that's the use of wrapper box to clear both for upcoming element to be at bottom of the wrappe box  */
+
+#about-us .satisfy-customer .unite-box-2 .unite-people-image{
+    width: 100%;
+    height: 30rem;
+    border: 2px solid rgb(175, 174, 174);
+}
+#about-us .satisfy-customer .unite-box-2 .unite-people-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ########################### contact us styling ####################### */
+#about-us .contact-us{
+    /* border: 2px solid red; */
+    background-color: #de434a;
+    width: 100%;
+    padding: 2rem;
+    font-size:2rem ;
+    text-align: center;
+    box-shadow: 5px 5px 10px 0.2px black;
+}
+#about-us .wrapper-contact-us{
+    /* margin: 2rem auto; */
+    /* border: 2px solid red; */
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+#about-us .contact-us a{
+    text-decoration: none;
+}
+#about-us .contact-us span{
+    color: rgb(175, 174, 174);
+    font-size: 3rem;
+    margin-left: 0.5rem;
+    border: 3px solid white;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+#about-us .contact-us a span:hover {
+    box-shadow: 10px 10px 20px 0.2px black;
+}
+
+/* ############################## footer styling ########################  */
+
+#about-us .footer{
+    border: 2px solid white;
+    width: 100%;
+    height: 18rem;
+    text-align: center;
+    background: -webkit-linear-gradient(to left, #1CB5E0, #001646);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #087bbd, #071c5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+#about-us .footer .box-wrapper{
+    border: 4px solid black;
+    height: 18rem;
+    width: 100%;
+    padding: 2rem;
+    
+}
+#about-us .footer .box-wrapper a{
+    text-decoration: none;
+    margin: 2rem;
+}
+#about-us .footer .box-wrapper .short-para{
+    margin-top: 2rem;
+}
+#about-us .footer .box-wrapper .social-hd{
+    margin-bottom: 2rem;
+    /* border: 2px solid black; */
+    width: 11rem;
+   margin: 0 auto;
+    
+}
+#about-us .footer .box-wrapper .social-hd::after{
+    content: '';
+    display: block;
+    border: 0.1rem solid #de434a;
+    width: 5rem;
+}
+#about-us .footer .box-wrapper span::after{
+    content: '';
+    display: block;
+    border: 0.1rem solid black;
+    width: 5.15rem;
+    margin-left: 5.24rem;
+    margin-bottom: -0.2rem;
+}
+#about-us .footer .box-wrapper .wrap-logo-hd{
+    margin-top: 2rem;
+}
